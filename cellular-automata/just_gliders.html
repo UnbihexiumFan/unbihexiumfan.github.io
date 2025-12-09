@@ -1,0 +1,247 @@
+<html>
+<head>
+    <meta charset="UTF8">
+    <meta name="LifeViewer" content="viewer textarea 150 fullscreen">
+    <title>Just Gliders</title>
+    <script src="./lifeviewer/lv-plugin.js"></script>
+</head>
+<body>
+    <a href="../cellular-automata.html">&lt; Back</a><br/><br/>
+
+    &lpar;Thank you to Chris Rowett for building the program I used to generate these displays! &lbrack;LifeViewer&rbrack; If you're interested, you can check out the program <a href="https://lazyslug.com/lifeviewer">here</a>!&rpar;
+
+    <h1>Just Gliders</h1>
+    Just Gliders &lpar;Hensel notation: B2-a3i4c5i/S12-k8&rpar; is a Life-like cellular automaton. See <a href="https://conwaylife.com/wiki/Hensel_notation">here</a> for what the thing in Hensel notation means.
+    <h2>Still lives</h2>
+    In a cellular automaton, a still life is any pattern which does not change when stepping generations. Just Gliders has two common still lives, the L and the I. Others exist, but they are extremely rare. By far, the I is the most common still life in Just Gliders, being roughly 4 to 5 times as common as the L according to <a href="https://catagolue.hatsya.com/census/b2-a3i4c5is12-k8/D8_4">Catagolue's <i>D8_4 census</i></a> and <a href="https://catagolue.hatsya.com/census/b2-a3i4c5is12-k8/C1"><i>C1 census</i></a>. It looks like this:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 1, y = 2, rule = B2-a3i4c5i/S12-k8
+o$o!
+[[ THEME 6 ]]
+		</textarea>
+	</div>
+    It is often produced during reactions involving the L, like this one:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">
+    x = 4, y = 7, rule = B2-a3i4c5i/S12-k8
+bo$bobo4$bo$2o!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 15 ]]
+		</textarea>
+	</div>
+    Or this one, in which it appears in a group of two:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 4, y = 3, rule = B2-a3i4c5i/S12-k8
+3bo$bo$2o!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 7 ]]
+		</textarea>
+	</div>
+    <br>In addition, it can often be left behind from decaying ash. The L is often formed in a similar way. Here are a few prominent patterns which leave Ls or Is behind:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 3, y = 2, rule = B2-a3i4c5i/S12-k8
+bo$obo!
+[[ THEME 6 AUTOSTART GPS 5 LOOP 40 ]]
+		</textarea>
+	</div>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 5, y = 2, rule = B2-a3i4c5i/S12-k8
+b3o$o3bo!
+[[ THEME 6 AUTOSTART GPS 5 LOOP 26 Y 3 ]]
+		</textarea>
+	</div>
+    <h2>Oscillators</h2>
+    In a cellular automaton, an oscillator is any pattern which changes across generations but stays in the same spot and eventually goes back to its original state. Each oscillator has a period, which is the number of generations it takes before it returns to its original state. Many different periods of oscillators are known in Just Gliders, but the two most common ones have periods 3 and 4.<br/><br/>
+    
+    Period 3 oscillator:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 5, y = 5, rule = B2-a3i4c5i/S12-k8
+2bo2$o3bo2$2bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 3 ]]
+		</textarea>
+	</div>
+    Period 4 oscillator:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 3, y = 3, rule = B2-a3i4c5i/S12-k8
+obo2$2bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 4 X 0.5 Y -0.5 ]]
+		</textarea>
+	</div>
+    <br/>These are formed the same way as the still lives; as byproducts of ash.<br/><br/>
+    In addition, higher period oscillators are known, such as this decently common period 5:<br/>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">
+    x = 4, y = 5, rule = B2-a3i4c5i/S12-k8
+2bo$2bo$o2bo$bo$bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 5 ]]
+		</textarea>
+	</div>
+    formed via a glider colliding into two Is:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+		<textarea rows="4" cols="70" style="display: none;">
+    x = 6, y = 7, rule = B2-a3i4c5i/S12-k8
+4bo2$4b2o2$o$obo$2bo!
+[[ THEME 6 AUTOSTART GPS 5 LOOP 17 Y 3 ]]
+		</textarea>
+	</div>
+    <h3>Gallery</h3>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> Various period 2s:</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 32, y = 8, rule = B2-a3i4c5i/S12-k8
+2bo2bo7bo12bo$3b2o8bob2o9bo$o6bo7bo8bobob2o$bo4bo8b2obo5bobo2bo$bo4bo
+11bo7bo$o6bo19b5o$3b2o$2bo2bo22b2o!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 2 ]]
+		</textarea>
+	</div>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> Various period 3s:</a>
+		<textarea rows="4" cols="70" style="display: none;">x = 41, y = 17, rule = B2-a3i4c5i/S12-k8
+obo7bobo9bobo2$obo7bobobo7bobobo2$12bobo9bobobo2$26bobo8$obo7bobo3bob
+o7bobo3bobo3bobo2$obo7bobo3bobo7bobo3bobo3bobo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 3 ]]
+        </textarea>
+	</div>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> Various period 4s:</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 33, y = 29, rule = B2-a3i4c5i/S12-k8
+24bo$obo6bobo3bo$24bobo$2bo8bo3bobo$28bo2$28bobo6$bo8bo11bo7bo$3bo8bo
+6b2obo8b2o$bo7bo21bo$bo9bo6b6o7bo$3bo27b2o$bo17b3o10bo$21bo8bo$21bo$19b
+3o$30bo$18b6o8bo$3bo27b2o$3bo15b2obo8bo$2obobo16bo8bo$3bobo25b2o$3bo26b
+o$2o!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 4 ]]
+        </textarea>
+    </div>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> The two known period 5s:</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 18, y = 9, rule = B2-a3i4c5i/S12-k8
+o12bo$2bo7b2obob2o$o9bo5bo$2bo9bobo$9b2o5b2o$12bobo$10bo5bo$10b2obob2o
+$13bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 5 ]]
+        </textarea>
+    </div>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> The known period 6:</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 7, y = 8, rule = B2-a3i4c5i/S12-k8
+4bo$3bo$4bobo$5bo$bo$obo$3bo$2bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 6 ]]
+        </textarea>
+    </div>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> The two known period 8s:</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 16, y = 9, rule = B2-a3i4c5i/S12-k8
+13bo$2bo$10b2o3bo$o3bo6bo$2bo11bo$12bo$2bo$b3o$2bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 8 ]]
+        </textarea>
+    </div>
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> Various high-period oscillators:</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 171, y = 34, rule = B2-a3i4c5i/S12-k8
+3b2o8b2o141bo$3b2o8b2o9bobo$2b3o2bo2bo2b3o$5o2bo2bo2b5o6bo2bo124bo7bo
+$5o8b5o26b3o$25bobo15bo3bo104bo7bo$71bobo2bobo74bo2bo2bo$2b2o10b2o28b
+3o26bo2bo77b5o$73bo2bo79bo$39bo11bo16bo12bo$2b2o10b2o22bo2bo7bo2bo50b
+2o20b2o18bobo17bobo$38bo2bo7bo2bo15b3o8b3o21bo7bo6bo7bo21bo15bo$38bo2b
+o7bo2bo56b3o6b3o28bo13bo$5o8b5o21bo11bo57bobo6bobo28bo13bo$5o2bo2bo2b
+5o50b3o8b3o27b2o8b2o21bo5b3o11b3o5bo$2b3o2bo2bo2b3o28b3o61bo12bo27bo13b
+o$3b2o8b2o53bo12bo23b3o14b3o24bo13bo$3b2o8b2o28bo3bo25bo2bo28bobo14bo
+bo23bo15bo$44b3o26bo2bo27b3o16b3o19bobo17bobo$71bobo2bobo$156bo$154b5o
+$153bo2bo2bo$152bo7bo2$104b3o16b3o26bo7bo$105bobo14bobo$105b3o14b3o$108b
+o12bo34bo$109b2o8b2o$109bobo6bobo$109b3o6b3o$103bo7bo6bo7bo$103b2o20b
+2o!
+[[ THEME 6 AUTOSTART GPS 7 ]]
+        </textarea>
+    </div>
+    <h2>Spaceships</h2>
+    A spaceship is a pattern that goes back to its original state, but at a different location. Just Gliders has several spaceships of several different speeds. The most common is this 3-celled ship, which will be deemed "the glider":
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 3, y = 2, rule = B2-a3i4c5i/S12-k8
+2o2$o!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 4 TRACK -1/4 -1/4 ]]
+        </textarea>
+    </div>
+    It moves diagonally at a speed of c/4 diagonal, where 'c' is the 'speed of light', aka movement of one cell per generation. It is often produced either by reactions involving the I, decaying ash, or by production from the rake (see section #Rakes).
+    It is by far the most common object in asymmetric soups in Just Gliders, being around 29 times more common as the next most common object, the I, according to <a href="https://catagolue.hatsya.com/census/b2-a3i4c5is12-k8/C1">Catagolue's <i>C1 census</i></a>. However, it is less common in symmetric soups; the I is around 5 times more common than the glider in soups with D8_4 symmetry &lpar;symmetric under reflection and 90 degree rotation about a corner&rpar; according to <a href="https://catagolue.hatsya.com/census/b2-a3i4c5is12-k8/D8_4">Catagolue's <i>D8_4 census</i></a>.<br/><br/>
+
+    A few more spaceships are known to occur naturally in Just Gliders, such as this one that also moves at c/4 diagonal:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 2, y = 4, rule = B2-a3i4c5i/S12-k8
+2o2$o$bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 4 TRACK -1/4 -1/4 ]]
+        </textarea>
+    </div>
+    It is also formed from decaying ash, and from reactions involving still lives such as the I, like this one:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 9, y = 4, rule = B2-a3i4c5i/S12-k8
+2bo$2o$5bo2bo$5bo2bo!
+[[ THEME 6 AUTOSTART GPS 5 LOOP 20 ]]
+        </textarea>
+    </div><br/>
+        Two more diagonal speeds are known to occur naturally: c/5 and c/6. The c/5 diagonal ship looks like this:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 4, y = 4, rule = B2-a3i4c5i/S12-k8
+obo$2b2o2$3bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 5 TRACK 1/5 -1/5 ]]
+        </textarea>
+    </div>
+    And here are a few of the many c/6 diagonal ships, though many of them are infinitely extendible:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 43, y = 7, rule = B2-a3i4c5i/S12-k8
+obo14bobo17bobo$2b2o15b2o18b2o2$3bobo14bobo14b2obobo$5bo16b2o18bo2$23b
+o!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 6 TRACK 1/6 -1/6 ]]
+        </textarea>
+    </div>
+    <br/>No other diagonal speeds for spaceships are known, but the speed 7c/78 diagonal is known in rakes (see section #Rakes).<br/><br/>
+    There are 5 known orthogonal speeds in Just Gliders, but only c/2 orthogonal ships have been observed naturally; namely, this one:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 4, y = 5, rule = B2-a3i4c5i/S12-k8
+bo$o2bo2$bobo$2bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 8 TRACK 0 1/2 ]]
+        </textarea>
+    </div>
+    <br/>The other known orthogonal speeds are 2c/5, c/3, c/4, and c/5. Here is a 2c/5 ship:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 13, y = 10, rule = B2-a3i4c5i/S12-k8
+3bob3obo$5bobo$4b2ob2o$2bo7bo$4bobobo$3bo5bo$4bo3bo$bo2bo3bo2bo2$o3b2o
+b2o3bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 5 TRACK 0 -2/5 ]]
+        </textarea>
+    </div>
+    Here is a c/3 ship:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 8, y = 12, rule = B2-a3i4c5i/S12-k8
+2bo$bo$3bo$2o2bo$2b2obo2$3b2o2bo$4bo2bo$4bobo$6bo$3b3o$4bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 3 TRACK 0 -1/3 ]]
+        </textarea>
+    </div>
+    Here is a c/4 ship:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 19, y = 25, rule = B2-a3i4c5i/S12-k8
+8b3o$7b2ob2o$7bo3bo2$6bo5bo$5bo7bo$8bobo$9bo2$3bobobo3bobobo$3bob3o3b
+3obo$2b2o11b2o$6bobobobo$7b5o$6b2o3b2o$7bobobo$7bo3bo$2b3o4bo4b3o$3bo
+11bo$o5bo5bo5bo$3bobob5obobo$8b3o$bo5bobobo5bo2$4bo9bo!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 4 TRACK 0 -1/4 ]]
+        </textarea>
+    </div>
+    And here is a c/5 ship:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 48, y = 48, rule = B2-a3i4c5i/S12-k8
+17$18bobo4bobo$17bo3bo2bo3bo$15bobobobo2bobobobo$15bo3bo6bo3bo$14b2o3b
+o6bo3b2o$20bo4bo$21bo2bo$17b2o2bo2bo2b2o$20b2o2b2o$18bobo4bobo$18bo8bo
+$17bo3bo2bo3bo$17bobob4obobo$15bobobo6bobobo$15bo3bo6bo3bo$16bo12bo$
+18b3o4b3o!
+[[ THEME 6 AUTOSTART GPS 3 LOOP 5 TRACK 0 -1/5 ]]
+        </textarea>
+    </div>
+    <h2>Rakes</h2>
+    A rake is a pattern that is similar to a spaceship in that it goes back to its original state in a different location after a certain number of generations, but it also produces spaceships. Only one rake is known in Just Gliders, but it is elementary, meaning it cannot be seen as a combination of smaller patterns, and it is extremely common and small, being made up of four cells at its smallest. It moves at a speed of 7c/78 diagonal, and it produces a glider every 39 generations. Its existence causes sufficiently large soups in Just Gliders to become explosive, as the gliders it produces can collide with other objects to form additional rakes. It looks like so:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 31, y = 38, rule = B2-a3i4c5i/S12-k8
+28bobo$30bo8$13bo$14bo$12bo$12bo23$o$o$bo!
+[[ THEME 6 AUTOSTART GPS 7 LOOP 78 TRACK -7/78 -7/78 X -2 Y -8 ZOOM 32 ]]
+        </textarea>
+    </div>
+    <h2>Other patterns</h2>
+    A few other patterns are known in Just Gliders, such as this gun (a pattern which goes back to its original state in the same location but produces spaceships):
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 33, y = 33, rule = B2-a3i4c5i/S12-k8
+26b2o$28bo3$31bo$32bo$32bo11$11b2o$7bo3bo2$8bo6bo$8b2obo2b2o2$11bo$11b
+2o$14bo$o$o$bo3$4bo$5b2o!
+[[ THEME 6 AUTOSTART GPS 7 LOOP 80 X -5 Y 5 ZOOM 32 ]]
+        </textarea>
+    </div>
+    <br/>It has period 80 and produces a glider every 40 generations.<br/><br/>
+
+    I don't have any more patterns so goodbye :D<br/><br/>I will see you in the next one or something, idk, how are you supposed to end a webpage about a niche cellular automaton, whatever<br/><br/>
+</body>
+</html>
