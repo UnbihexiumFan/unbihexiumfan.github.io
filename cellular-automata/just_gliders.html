@@ -9,6 +9,7 @@
     <a href="../cellular-automata.html">&lt; Back</a><br/><br/>
 
     &lpar;Thank you to Chris Rowett for building the program I used to generate these displays! &lbrack;LifeViewer&rbrack; If you're interested, you can check out the program <a href="https://lazyslug.com/lifeviewer">here</a>!&rpar;
+	All discoveries are made by me unless otherwise stated.
 
     <h1>Just Gliders</h1>
     Just Gliders &lpar;Hensel notation: B2-a3i4c5i/S12-k8&rpar; is a Life-like cellular automaton. See <a href="https://conwaylife.com/wiki/Hensel_notation">here</a> for what the thing in Hensel notation means.
@@ -181,7 +182,7 @@ o!
 [[ THEME 6 AUTOSTART GPS 3 LOOP 6 TRACK 1/6 -1/6 ]]
         </textarea>
     </div>
-    <br/>No other diagonal speeds for spaceships are known, but the speed 7c/78 diagonal is known in rakes (see section #Rakes).<br/><br/>
+    <br/>The speed 7c/78 diagonal is known in the rake, and spaceships can be constructed based on this rake. See section #Rakes.<br/><br/>
     There are 5 known orthogonal speeds in Just Gliders, but only c/2 orthogonal ships have been observed naturally; namely, this one:
     <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
         <textarea rows="4" cols="70" style="display: none;">x = 4, y = 5, rule = B2-a3i4c5i/S12-k8
@@ -224,13 +225,31 @@ $17bo3bo2bo3bo$17bobob4obobo$15bobobo6bobobo$15bo3bo6bo3bo$16bo12bo$
         </textarea>
     </div>
     <h2>Rakes</h2>
-    A rake is a pattern that is similar to a spaceship in that it goes back to its original state in a different location after a certain number of generations, but it also produces spaceships. Only one rake is known in Just Gliders, but it is elementary, meaning it cannot be seen as a combination of smaller patterns, and it is extremely common and small, being made up of four cells at its smallest. It moves at a speed of 7c/78 diagonal, and it produces a glider every 39 generations. Its existence causes sufficiently large soups in Just Gliders to become explosive, as the gliders it produces can collide with other objects to form additional rakes. It looks like so:
+    A rake is a pattern that is similar to a spaceship in that it goes back to its original state in a different location after a certain number of generations, but it also produces spaceships. Only one rake has appeared naturally in Just Gliders, but it is elementary, meaning it cannot be seen as a combination of smaller patterns, and it is extremely common and small, being made up of four cells at its smallest. All other known rakes are based on this one. It moves at a speed of 7c/78 diagonal, and it produces a glider every 39 generations. Its existence causes sufficiently large soups in Just Gliders to become explosive, as the gliders it produces can collide with other objects to form additional rakes. It looks like so:
     <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
         <textarea rows="4" cols="70" style="display: none;">x = 31, y = 38, rule = B2-a3i4c5i/S12-k8
 28bobo$30bo8$13bo$14bo$12bo$12bo23$o$o$bo!
 [[ THEME 6 AUTOSTART GPS 7 LOOP 78 TRACK -7/78 -7/78 X -2 Y -8 ZOOM 32 ]]
         </textarea>
     </div>
+	Based on this rake, a spaceship of the same speed has been constructed by silversmith on the Conway's Game of Life forums:
+    <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
+        <textarea rows="4" cols="70" style="display: none;">x = 117, y = 110, rule = B2-a3i4c5i/S12-k8
+67bo$54b2o12bo$53bobo$22b2o29bo10bobob2o$54bo9bo$23bo27bo12bo3bo$55bo
+8bo$50b2ob3o9bobo$51bo2$73bo$60bo10b2o$60bo15b2o$59bo15bo3$9bobo$11bo
+56bo$66bo$44bo23bo$42bo2bo20bo$41bo51bo$42bobo47bo$92bo$94b2o$2bobo89b
+o2$56bo$2o54bo$bobo5$49bo$49bo3$21b2o2$20bo3bo73bo$24bo17bo55bo9bo$25b
+o16bo53bo2bo9bo$18bo3b3o72bo$17b3obo75bo7bobob2o$17b2obob2o81bo$17b2ob
+ob2o81bo3bo$18b2ob2o67bob2o11bo$20bo14bo55bo14bobo$35bo61bo$89bo7bo$
+89bo4bo19bo$90bo2b2obo15b2o$95bo3$109b2o$108bobo$108bo$109bo$81b2o23bo
+$110bo$105b2ob3o$106bo3$115bo$74b2o39bo$114bo6$67b2o7$60b2o2$114b2o$
+116bo4$71b2o$86bo$70bo3bo$74bo$75bo12b3o$68bo3b3o12bobo$67b3obo15b3o$
+67b2obob2o28bo$67b2obob2o29bo$68b2ob2o30bo$70bo2$78bo$78bo$77bo6$89b2o
+$91bo!
+[[ THEME 6 AUTOSTART GPS 7 LOOP 78 TRACK -7/78 -7/78 X -2 Y -8 ZOOM 32 ]]
+        </textarea>
+    </div>
+	
     <h2>Other patterns</h2>
     A few other patterns are known in Just Gliders, such as this gun (a pattern which goes back to its original state in the same location but produces spaceships):
     <div class="viewer"><a href="" onclick="updateViewer(this); return false;"> (Click to show popup)</a>
@@ -244,4 +263,5 @@ $17bo3bo2bo3bo$17bobob4obobo$15bobobo6bobobo$15bo3bo6bo3bo$16bo12bo$
 
     I don't have any more patterns so goodbye :D<br/><br/>I will see you in the next one or something, idk, how are you supposed to end a webpage about a niche cellular automaton, whatever<br/><br/>
 </body>
+
 </html>
